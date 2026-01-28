@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Tri Systems</title>
+<title>Tri Systems | Tecnologia ligada ao futuro do seu negócio.</title>
 
 <link rel="stylesheet" href="{{ asset('assets/css/style.css') }}">
 <link rel="stylesheet" href="{{ asset('assets/css/navbar.css') }}">
@@ -14,7 +14,6 @@
 <link rel="stylesheet" href="{{ asset('assets/css/team.css') }}">
 <link rel="stylesheet" href="{{ asset('assets/css/contact.css') }}">
 <link rel="stylesheet" href="{{ asset('assets/css/footer.css') }}">
-
 </head>
 <body>
 <header id="navbar" class="navbar">
@@ -49,11 +48,6 @@
         </button>
       </nav>
 
-      <!-- CTA -->
-      <div class="cta-desktop">
-        <button class="btn-primary" data-target="contact">Iniciar Projeto</button>
-      </div>
-
       <!-- Mobile Toggle -->
       <button class="mobile-toggle" id="mobileToggle">
         ☰
@@ -69,7 +63,6 @@
     <button data-target="services">Serviços</button>
     <button data-target="projects">Projetos</button>
     <button data-target="contact">Contato</button>
-    <button class="btn-primary" data-target="contact">Iniciar Projeto</button>
   </nav>
 </div>
 
@@ -82,9 +75,6 @@
   <div class="orb orb-cyan"></div>
 
   <div class="content">
-    <span class="badge">
-      ✨ Transformando ideias em realidade digital
-    </span>
 
     <h1 class="title">
       <span class="white">Tri</span>
@@ -104,6 +94,12 @@
       <a href="#projects" class="btn outline">
         Ver Projetos
       </a>
+    </div>
+  </div>
+  <div class="scroll-indicator">
+    <span>Role para baixo</span>
+    <div class="mouse">
+        <div class="wheel"></div>
     </div>
   </div>
 </section>
@@ -168,6 +164,7 @@
     </div>
   </div>
 </section>
+
 <section id="services" class="services">
   <div class="services-pattern"></div>
 
@@ -243,6 +240,7 @@
     </div>
   </div>
 </section>
+
 <section id="projects" class="projects">
   <div class="projects-line"></div>
 
@@ -272,7 +270,10 @@
 
           <div class="card-content">
             <h3>Projeto em Desenvolvimento</h3>
-            <p>Sistema inovador atualmente em fase de construção. Detalhes completos em breve.</p>
+            <p>
+              Sistema inovador atualmente em fase de construção.
+              Detalhes completos em breve.
+            </p>
 
             <div class="tags">
               <span class="tag">Em Andamento</span>
@@ -292,7 +293,10 @@
 
           <div class="card-content">
             <h3>Próximo Projeto</h3>
-            <p>Espaço reservado para o próximo grande projeto da TriSystems.</p>
+            <p>
+              Espaço reservado para o próximo grande projeto
+              da TriSystems.
+            </p>
 
             <div class="tags">
               <span class="tag">Em Breve</span>
@@ -311,7 +315,10 @@
 
           <div class="card-content">
             <h3>Futuro Projeto</h3>
-            <p>Mais uma oportunidade de inovação em desenvolvimento.</p>
+            <p>
+              Mais uma iniciativa focada em inovação,
+              tecnologia e impacto real.
+            </p>
 
             <div class="tags">
               <span class="tag">Em Breve</span>
@@ -321,15 +328,15 @@
       </div>
     </div>
 
-    <!-- CTA -->
     <div class="projects-cta reveal" style="--delay: .5s">
-      <p>Tem um projeto em mente? Vamos conversar sobre como podemos ajudar.</p>
+      <p>Tem um projeto em mente? Vamos construir algo incrível juntos.</p>
       <button class="btn-primary" data-target="contact">
-        Solicitar Orçamento
+        Solicitar Orçamento →
       </button>
     </div>
   </div>
 </section>
+
 
 <section id="team" class="team">
   <!-- Linha divisória (igual às outras sections) -->

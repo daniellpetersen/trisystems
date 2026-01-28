@@ -1,6 +1,6 @@
 .projects {
   position: relative;
-  padding: 8rem 0;
+  padding: 7rem 0;
   background: #0a0a0f;
 }
 
@@ -10,7 +10,12 @@
   left: 0;
   width: 100%;
   height: 1px;
-  background: linear-gradient(to right, transparent, rgba(99,102,241,0.3), transparent);
+  background: linear-gradient(
+    to right,
+    transparent,
+    rgba(99,102,241,0.35),
+    transparent
+  );
 }
 
 .projects-container {
@@ -19,6 +24,8 @@
   padding: 0 24px;
 }
 
+/* ================= HEADER ================= */
+
 .projects-header {
   text-align: center;
   margin-bottom: 5rem;
@@ -26,14 +33,15 @@
 
 .projects-eyebrow {
   color: #818cf8;
-  font-size: .75rem;
-  letter-spacing: .3em;
+  font-size: .7rem;
+  letter-spacing: .35em;
   text-transform: uppercase;
+  opacity: .9;
 }
 
 .projects-title {
-  margin: 1rem 0 1.5rem;
-  font-size: clamp(2.5rem, 5vw, 3.5rem);
+  margin: 1rem 0 1.25rem;
+  font-size: clamp(2.5rem, 5vw, 3.4rem);
   font-weight: 700;
   color: white;
 }
@@ -45,15 +53,19 @@
 }
 
 .projects-description {
-  max-width: 640px;
+  max-width: 620px;
   margin: 0 auto;
   color: #9ca3af;
-  font-size: 1.1rem;
+  font-size: 1.05rem;
+  line-height: 1.7;
 }
+
+/* ================= GRID ================= */
 
 .projects-grid {
   display: grid;
   gap: 32px;
+  margin-bottom: 5rem;
 }
 
 @media (min-width: 768px) {
@@ -68,26 +80,38 @@
   }
 }
 
+/* ================= CARD ================= */
+
 .project-card {
   position: relative;
 }
 
 .card {
-  height: 100%;
+  display: flex;
+  flex-direction: column;
+  height: auto;
   border-radius: 1.25rem;
-  background: rgba(255,255,255,0.02);
-  border: 1px solid rgba(255,255,255,0.1);
+  background: rgba(255,255,255,0.035);
+  border: 1px solid rgba(255,255,255,0.12);
+  backdrop-filter: blur(10px);
   overflow: hidden;
-  transition: all .5s ease;
+  transition:
+    transform .45s ease,
+    box-shadow .45s ease,
+    border-color .45s ease;
 }
 
 .project-card:hover .card {
-  border-color: rgba(99,102,241,.5);
+  transform: translateY(-6px);
+  border-color: rgba(99,102,241,.45);
+  box-shadow: 0 26px 50px -22px rgba(99,102,241,.35);
 }
+
+/* ================= IMAGE ================= */
 
 .card-image {
   position: relative;
-  height: 192px;
+  height: 160px;
   overflow: hidden;
 }
 
@@ -95,7 +119,8 @@
   content: "";
   position: absolute;
   inset: 0;
-  opacity: .8;
+  opacity: .85;
+  z-index: 1;
 }
 
 .gradient-indigo::before {
@@ -114,23 +139,26 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
-  opacity: .5;
+  opacity: .35;
   transition: transform .7s ease;
 }
 
 .project-card:hover img {
-  transform: scale(1.1);
+  transform: scale(1.08);
 }
+
+/* ================= BADGE ================= */
 
 .badge {
   position: absolute;
-  top: 16px;
-  right: 16px;
-  padding: 6px 12px;
+  top: 14px;
+  right: 14px;
+  padding: 6px 14px;
   border-radius: 999px;
-  font-size: .75rem;
+  font-size: .7rem;
   color: white;
   backdrop-filter: blur(6px);
+  z-index: 2;
 }
 
 .badge-progress {
@@ -138,17 +166,19 @@
 }
 
 .badge-soon {
-  background: rgba(255,255,255,.2);
+  background: rgba(255,255,255,.25);
 }
 
+/* ================= CONTENT ================= */
+
 .card-content {
-  padding: 24px;
+  padding: 22px;
 }
 
 .card-content h3 {
-  font-size: 1.25rem;
+  font-size: 1.2rem;
   color: white;
-  margin-bottom: 12px;
+  margin-bottom: 10px;
   transition: color .3s ease;
 }
 
@@ -160,7 +190,10 @@
   color: #9ca3af;
   margin-bottom: 16px;
   line-height: 1.6;
+  max-width: 95%;
 }
+
+/* ================= TAGS ================= */
 
 .tags {
   display: flex;
@@ -169,29 +202,42 @@
 }
 
 .tag {
-  padding: 4px 10px;
+  padding: 4px 12px;
   border-radius: 999px;
   font-size: .7rem;
   color: #9ca3af;
   border: 1px solid rgba(255,255,255,0.2);
 }
 
+/* ================= CTA ================= */
+
 .projects-cta {
   text-align: center;
-  margin-top: 4rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 26px;
 }
 
 .projects-cta p {
   color: #9ca3af;
-  margin-bottom: 24px;
+  font-size: 1.05rem;
+  max-width: 520px;
 }
 
 .btn-primary {
-  padding: 14px 28px;
-  border-radius: 14px;
+  padding: 14px 32px;
+  min-width: 260px;
+  border-radius: 16px;
   border: none;
   background: linear-gradient(90deg, #4f46e5, #7c3aed);
   color: white;
-  font-size: 1rem;
+  font-size: .95rem;
   cursor: pointer;
+  transition: transform .25s ease, box-shadow .25s ease;
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 14px 32px rgba(99,102,241,.45);
 }
