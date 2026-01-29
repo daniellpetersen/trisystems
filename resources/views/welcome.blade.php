@@ -6,6 +6,9 @@
 
 <title>Tri Systems | Tecnologia ligada ao futuro do seu negócio.</title>
 
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+
 <link rel="stylesheet" href="{{ asset('assets/css/style.css') }}">
 <link rel="stylesheet" href="{{ asset('assets/css/navbar.css') }}">
 <link rel="stylesheet" href="{{ asset('assets/css/about.css') }}">
@@ -14,6 +17,8 @@
 <link rel="stylesheet" href="{{ asset('assets/css/team.css') }}">
 <link rel="stylesheet" href="{{ asset('assets/css/contact.css') }}">
 <link rel="stylesheet" href="{{ asset('assets/css/footer.css') }}">
+<link rel="stylesheet" href="{{ asset('assets/css/stack.css') }}">
+
 </head>
 <body>
 <header id="navbar" class="navbar">
@@ -131,7 +136,7 @@
         <div class="card">
           <div class="icon">💡</div>
           <h3>Inovação</h3>
-          <p>Buscamos constantemente as tecnologias mais avançadas para entregar soluções únicas.</p>
+          <p>Aplicamos tecnologias modernas de ponta para gerar soluções inovadoras.</p>
         </div>
       </div>
 
@@ -260,75 +265,34 @@
     </div>
 
     <div class="projects-grid">
-      <!-- Card 1 -->
-      <div class="project-card reveal" style="--delay: 0s">
+      <div class="project-card reveal" style="--delay:0s">
         <div class="card">
-          <div class="card-image gradient-indigo">
-            <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=800&h=500&fit=crop" alt="">
-            <span class="badge badge-progress">⏳ Em Andamento</span>
+          <div class="card-image">
+            <img src="{{ asset('assets/images/ttcontrol.png') }}" alt="TTControl">
           </div>
 
           <div class="card-content">
-            <h3>Projeto em Desenvolvimento</h3>
+            <h3>TTControl</h3>
+
             <p>
-              Sistema inovador atualmente em fase de construção.
-              Detalhes completos em breve.
+              Simplifique o complexo. Automatize mensalidades, controle presenças
+              e gerencie reservas com a plataforma mais fluida e intuitiva do Brasil.
             </p>
 
             <div class="tags">
-              <span class="tag">Em Andamento</span>
-              <span class="tag">Confidencial</span>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Card 2 -->
-      <div class="project-card reveal" style="--delay: .15s">
-        <div class="card">
-          <div class="card-image gradient-cyan">
-            <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=800&h=500&fit=crop" alt="">
-            <span class="badge badge-soon">Em Breve</span>
-          </div>
-
-          <div class="card-content">
-            <h3>Próximo Projeto</h3>
-            <p>
-              Espaço reservado para o próximo grande projeto
-              da TriSystems.
-            </p>
-
-            <div class="tags">
-              <span class="tag">Em Breve</span>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Card 3 -->
-      <div class="project-card reveal" style="--delay: .3s">
-        <div class="card">
-          <div class="card-image gradient-violet">
-            <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=500&fit=crop" alt="">
-            <span class="badge badge-soon">Em Breve</span>
-          </div>
-
-          <div class="card-content">
-            <h3>Futuro Projeto</h3>
-            <p>
-              Mais uma iniciativa focada em inovação,
-              tecnologia e impacto real.
-            </p>
-
-            <div class="tags">
-              <span class="tag">Em Breve</span>
+              <a href="https://ttcontrol.com.br/"
+                 target="_blank"
+                 rel="noopener noreferrer"
+                 class="tag">
+                Acessar
+              </a>
             </div>
           </div>
         </div>
       </div>
     </div>
 
-    <div class="projects-cta reveal" style="--delay: .5s">
+    <div class="projects-cta reveal" style="--delay:.4s">
       <p>Tem um projeto em mente? Vamos construir algo incrível juntos.</p>
       <button class="btn-primary" data-target="contact">
         Solicitar Orçamento →
@@ -336,6 +300,7 @@
     </div>
   </div>
 </section>
+
 
 
 <section id="team" class="team">
@@ -391,108 +356,37 @@
 </section>
 
 <section id="contact" class="contact">
-  <!-- Linha divisória padrão (igual às outras sections) -->
   <div class="contact-line"></div>
 
-  <!-- Background glows -->
   <div class="contact-glow">
     <div class="glow glow-indigo"></div>
     <div class="glow glow-violet"></div>
   </div>
 
   <div class="contact-container">
-    <!-- Header -->
     <div class="contact-header reveal">
       <span class="contact-eyebrow">Contato</span>
-
       <h2 class="contact-title">
-        Vamos
-        <span class="gradient"> Conversar</span>
+        Vamos Iniciar seu
+        <span class="gradient"> Projeto?</span>
       </h2>
-
       <p class="contact-description">
-        Pronto para transformar sua ideia em realidade? Entre em contato e
-        descubra como podemos ajudar seu negócio a crescer.
+        Não perca tempo com formulários. Clique no botão abaixo e fale agora mesmo com nossa equipe técnica pelo WhatsApp.
       </p>
     </div>
 
-    <div class="contact-grid">
-      <!-- Info -->
-      <div class="contact-info reveal" style="--delay:.15s">
-        <div class="info-card">
-          <div class="icon">✉️</div>
-          <div>
-            <span>Email</span>
-            <strong>contato@trisystems.com</strong>
-          </div>
-        </div>
+    <div class="contact-grid" style="display: flex; justify-content: center;">
+      <div class="contact-action-card reveal" style="--delay:.3s; text-align: center; background: rgba(255,255,255,0.05); padding: 40px; border-radius: 20px; border: 1px solid rgba(255,255,255,0.1); max-width: 500px;">
+        <div class="whatsapp-icon" style="font-size: 3rem; margin-bottom: 20px;">🚀</div>
+        <h3>Atendimento Imediato</h3>
+        <p style="margin-bottom: 30px; opacity: 0.8;">Nosso tempo médio de resposta é de menos de 10 minutos.</p>
 
-        <div class="info-card">
-          <div class="icon">📞</div>
-          <div>
-            <span>Telefone</span>
-            <strong>+55 (00) 00000-0000</strong>
-          </div>
-        </div>
-
-        <div class="info-card">
-          <div class="icon">📍</div>
-          <div>
-            <span>Localização</span>
-            <strong>Brasil</strong>
-          </div>
-        </div>
-
-        <div class="social">
-          <p>Siga-nos</p>
-          <div class="social-links">
-            <button>LinkedIn</button>
-            <button>GitHub</button>
-            <button>Instagram</button>
-          </div>
-        </div>
-      </div>
-
-      <!-- Form -->
-      <div class="contact-form reveal" style="--delay:.3s">
-        <div class="form-card">
-          <form id="contactForm">
-            <div class="form-grid">
-              <div>
-                <label>Nome</label>
-                <input name="name" required placeholder="Seu nome">
-              </div>
-              <div>
-                <label>Email</label>
-                <input name="email" type="email" required placeholder="seu@email.com">
-              </div>
-            </div>
-
-            <div>
-              <label>Assunto</label>
-              <input name="subject" required placeholder="Sobre o que gostaria de falar?">
-            </div>
-
-            <div>
-              <label>Mensagem</label>
-              <textarea name="message" rows="5" required placeholder="Conte-nos sobre seu projeto..."></textarea>
-            </div>
-
-            <button type="submit" class="btn-primary">
-              <span class="btn-text">Enviar Mensagem</span>
-              <span class="btn-loading">Enviando...</span>
-            </button>
-          </form>
-
-          <div id="successMessage" class="success hidden">
-            <div class="success-icon">✔</div>
-            <h3>Mensagem Enviada!</h3>
-            <p>Retornaremos em breve. Obrigado pelo contato!</p>
-            <button id="sendAnother" class="btn-outline">
-              Enviar outra mensagem
-            </button>
-          </div>
-        </div>
+        <a href="https://wa.me/5500000000000?text=Olá! Vim pelo site e gostaria de falar sobre um projeto."
+           target="_blank"
+           class="btn-primary"
+           style="background: #25D366; border: none; text-decoration: none; display: inline-flex; align-items: center; gap: 10px; padding: 15px 30px;">
+          <span class="btn-text">Chamar no WhatsApp</span>
+        </a>
       </div>
     </div>
   </div>
@@ -522,9 +416,9 @@
           </p>
 
           <div class="footer-social">
-            <a href="#" aria-label="LinkedIn">in</a>
+           <!-- <a href="#" aria-label="LinkedIn">in</a>
             <a href="#" aria-label="GitHub">gh</a>
-            <a href="#" aria-label="Instagram">ig</a>
+            <a href="#" aria-label="Instagram">ig</a> -->
           </div>
         </div>
 
@@ -555,7 +449,7 @@
           <h3>Contato</h3>
           <ul class="footer-contact">
             <li>📧 <a href="mailto:contato@trisystems.com">contato@trisystems.com</a></li>
-            <li>📞 <a href="tel:+5500000000000">+55 (00) 00000-0000</a></li>
+            <li>📞 <a href="tel:+5569992754579">+55 (69) 9.9275-4579</a></li>
             <li>📍 <span>Brasil</span></li>
           </ul>
         </div>
@@ -569,10 +463,20 @@
     <div class="footer-container bottom-bar">
       <p id="copyright"></p>
 
-      <div class="bottom-links">
-        <button>Política de Privacidade</button>
-        <button>Termos de Uso</button>
-      </div>
+     <div class="bottom-links">
+    <a href="{{ url('/politica-de-privacidade') }}" target="_blank">
+        Política de Privacidade
+    </a>
+
+    <a href="{{ url('/termos-de-uso') }}" target="_blank">
+        Termos de Uso
+    </a>
+
+    <a href="{{ url('/contrato-de-licenciamento') }}" target="_blank">
+        Contrato de Licenciamento
+    </a>
+    </div>
+
     </div>
   </div>
 
@@ -582,6 +486,9 @@
   </button>
 </footer>
 
+<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+
 <script src="{{ asset('assets/js/navbar.js') }}" defer></script>
 <script src="{{ asset('assets/js/hero.js') }}" defer></script>
 <script src="{{ asset('assets/js/about.js') }}" defer></script>
@@ -590,6 +497,22 @@
 <script src="{{ asset('assets/js/team.js') }}" defer></script>
 <script src="{{ asset('assets/js/contact.js') }}" defer></script>
 <script src="{{ asset('assets/js/footer.js') }}" defer></script>
+<script src="{{ asset('assets/js/stack.js') }}" defer></script>
+
+
+<div id="cookieBanner" class="cookie-banner">
+  <p>
+    Utilizamos cookies para melhorar sua experiência e analisar o uso do site.
+    Ao continuar, você concorda com nossa
+    <a href="{{ url('/politica-de-privacidade') }}" target="_blank">
+      Política de Privacidade
+    </a>
+  </p>
+
+  <button id="acceptCookies" class="btn-cookie">
+    Aceitar
+  </button>
+</div>
 
 </body>
 </html>

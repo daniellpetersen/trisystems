@@ -4,6 +4,8 @@
   background: #0a0a0f;
 }
 
+/* ================= LINE ================= */
+
 .projects-line {
   position: absolute;
   top: 0;
@@ -17,6 +19,8 @@
     transparent
   );
 }
+
+/* ================= CONTAINER ================= */
 
 .projects-container {
   max-width: 1120px;
@@ -60,36 +64,39 @@
   line-height: 1.7;
 }
 
-/* ================= GRID ================= */
+/* ================= GRID (INTELIGENTE) ================= */
 
 .projects-grid {
   display: grid;
-  gap: 32px;
-  margin-bottom: 5rem;
+  gap: 48px;
+  justify-content: center;
 }
 
-@media (min-width: 768px) {
-  .projects-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
+/* 👉 quando houver APENAS 1 projeto */
+.projects-grid:has(.project-card:only-child) {
+  grid-template-columns: 1fr;
 }
 
-@media (min-width: 1024px) {
-  .projects-grid {
-    grid-template-columns: repeat(3, 1fr);
-  }
+/* 👉 quando houver 2 ou mais */
+.projects-grid:not(:has(.project-card:only-child)) {
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 }
 
 /* ================= CARD ================= */
 
 .project-card {
-  position: relative;
+  width: 100%;
+  max-width: 360px;
+}
+
+/* destaque automático quando for único */
+.projects-grid:has(.project-card:only-child) .project-card {
+  max-width: 480px;
 }
 
 .card {
   display: flex;
   flex-direction: column;
-  height: auto;
   border-radius: 1.25rem;
   background: rgba(255,255,255,0.035);
   border: 1px solid rgba(255,255,255,0.12);
@@ -111,7 +118,7 @@
 
 .card-image {
   position: relative;
-  height: 160px;
+  height: 180px;
   overflow: hidden;
 }
 
@@ -123,62 +130,29 @@
   z-index: 1;
 }
 
-.gradient-indigo::before {
-  background: linear-gradient(135deg, #4f46e5, #7c3aed);
-}
-
-.gradient-cyan::before {
-  background: linear-gradient(135deg, #22d3ee, #2563eb);
-}
-
-.gradient-violet::before {
-  background: linear-gradient(135deg, #7c3aed, #a855f7);
-}
-
 .card-image img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  opacity: .35;
-  transition: transform .7s ease;
+  opacity: .45;
+  transition: transform .7s ease, opacity .4s ease;
 }
 
 .project-card:hover img {
   transform: scale(1.08);
-}
-
-/* ================= BADGE ================= */
-
-.badge {
-  position: absolute;
-  top: 14px;
-  right: 14px;
-  padding: 6px 14px;
-  border-radius: 999px;
-  font-size: .7rem;
-  color: white;
-  backdrop-filter: blur(6px);
-  z-index: 2;
-}
-
-.badge-progress {
-  background: rgba(245,158,11,.9);
-}
-
-.badge-soon {
-  background: rgba(255,255,255,.25);
+  opacity: .65;
 }
 
 /* ================= CONTENT ================= */
 
 .card-content {
-  padding: 22px;
+  padding: 26px;
 }
 
 .card-content h3 {
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   color: white;
-  margin-bottom: 10px;
+  margin-bottom: 12px;
   transition: color .3s ease;
 }
 
@@ -188,30 +162,35 @@
 
 .card-content p {
   color: #9ca3af;
-  margin-bottom: 16px;
-  line-height: 1.6;
-  max-width: 95%;
+  margin-bottom: 18px;
+  line-height: 1.65;
 }
 
-/* ================= TAGS ================= */
+/* ================= TAG ================= */
 
 .tags {
   display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
 }
 
 .tag {
-  padding: 4px 12px;
+  padding: 6px 16px;
   border-radius: 999px;
-  font-size: .7rem;
-  color: #9ca3af;
-  border: 1px solid rgba(255,255,255,0.2);
+  font-size: .75rem;
+  color: #c7d2fe;
+  border: 1px solid rgba(99,102,241,.45);
+  text-decoration: none;
+  transition: all .25s ease;
+}
+
+.tag:hover {
+  background: rgba(99,102,241,.15);
+  transform: translateY(-1px);
 }
 
 /* ================= CTA ================= */
 
 .projects-cta {
+  margin-top: 80px;
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -226,7 +205,7 @@
 }
 
 .btn-primary {
-  padding: 14px 32px;
+  padding: 16px 36px;
   min-width: 260px;
   border-radius: 16px;
   border: none;
@@ -241,3 +220,13 @@
   transform: translateY(-2px);
   box-shadow: 0 14px 32px rgba(99,102,241,.45);
 }
+
+.projects-cta .btn-primary {
+  width: 280px !important;
+  height: 52px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+

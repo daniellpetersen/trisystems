@@ -1,0 +1,70 @@
+.stack {
+  position: relative;
+  padding: 100px 0;
+  overflow: hidden;
+}
+
+.stack-line {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 1px;
+  height: 100%;
+  background: linear-gradient(
+    to bottom,
+    transparent,
+    rgba(255,255,255,.15),
+    transparent
+  );
+}
+
+.stack-container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 24px;
+}
+
+.stack-header {
+  text-align: center;
+  margin-bottom: 48px;
+}
+
+.stack-swiper {
+  pointer-events: none;
+}
+
+.stack-swiper .swiper-slide {
+  width: 140px;
+  display: flex;
+  justify-content: center;
+}
+
+.stack-swiper img {
+  height: 56px;
+  object-fit: contain;
+  opacity: 0;
+  filter: grayscale(100%);
+  transform: translateX(24px);
+  transition:
+    opacity .6s ease,
+    transform .6s ease,
+    filter .3s ease;
+}
+
+/* Logos vão "surgindo" */
+.stack-swiper .swiper-slide-active img,
+.stack-swiper .swiper-slide-next img {
+  opacity: .4;
+  transform: translateX(0);
+}
+
+.stack-swiper .swiper-slide-next + .swiper-slide img {
+  opacity: .7;
+}
+
+.stack-swiper .swiper-slide-next
++ .swiper-slide
++ .swiper-slide img {
+  opacity: 1;
+  filter: grayscale(0);
+}

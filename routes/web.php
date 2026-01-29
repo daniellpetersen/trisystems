@@ -7,6 +7,11 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::view('/politica-de-privacidade', 'legal.privacy')->name('privacy');
+Route::view('/termos-de-uso', 'legal.terms')->name('terms');
+Route::view('/contrato-de-licenciamento', 'legal.contract')->name('contract');
+
+
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
